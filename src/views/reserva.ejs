@@ -1,0 +1,73 @@
+<% include partes/_header%>
+
+
+<div class="col-md-7" style="margin-top: 10px">
+<H5>seleccione habitación</H5>
+
+
+<div class="container">
+
+        <div class="row">
+            <div class="col">
+                                    
+                        
+                    <form action="/add/api" method= "POST"> 
+            
+
+
+                        <select name="habitacion">
+                                <option>sencilla</option>
+
+                                <option>doble</option>
+
+                                <option selected> Vip</option>
+                        </select>
+
+                        Fecha ingreso: <input type="date" name="ingreso" step="1" min="date" max="2020-12-31" value="">
+
+                        Fecha salida: <input type="date" name="salida" step="1" min="date" max="2020-12-31" value="">
+                            <input name="personas" placeholder=" # de Personas" type="number" class="form-control">
+                            <button type="submit" class="btn btn-primary btn-block">verificar</button>
+
+                  
+                        </form>                  
+           
+           
+                        <div class="col">          
+                         
+                            
+
+
+                        </div>
+           
+           
+           
+          </div>
+    </div>
+</div>
+
+
+
+<div class="col-md-7">
+    <table class="table table-bordered table-hover">
+        <h3>Disponibilidad</h3>
+        <thead>
+            <tr>
+                <th>Hab.sencilla</th>
+                <th>Hab.dobles</th>
+                <th>Hab.vip</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+                <tr>
+                   <td><%=10%></td>
+                   <td><%=10%></td>
+                   <td><%=5%></td>
+           
+        </tbody>
+     
+    </table>
+
+</div>
+<% include partes/fooder%>
